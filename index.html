@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Slider of Github</title>
+  
+
+  <script>
+var i=0; //start point//
+var images = [] // this point is start images arrays
+var times = 2000 // this point is amount of images slide
+images [0]="images/004.jpg";
+images [1] = "images/005.jpg";
+images [2] = "images/006.jpg";
+//change Images
+function changeimage(){
+document.slider.src= images[i];
+//check if index is under max
+if(i < images.length - 1){
+// add 1 to index
+i++;
+} 
+else{
+//reset Back to 0
+i= 0;}
+//Run function every x seconds
+setTimeout("changeimage()",times);}
+//Run function when page load.
+window.onload=changeimage;  
+   </script> 
+
+</head>
+<body>
+
+  
+
+<img src="images/003.jpg" name="slider"alt="" title=""> 
+
+
+
+</body>
+
+</html>
